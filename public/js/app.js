@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const city = document.getElementById('input')
     document.getElementById('search').addEventListener('click', (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/weather?address=' + city.value).then((response) => {
+        fetch('/weather?address=' + city.value).then((response) => {
 
             response.json().then((data) => {
                 if (data.error) {
