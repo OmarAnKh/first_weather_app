@@ -39,11 +39,10 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    if (!req.query.address) {
-        return res.send({
-            error: 'You must provide a search term'
-        })
-    }
+    res.render('About', {
+        title: "About me",
+        name: "Omar Khalili"
+    })
 
 })
 
