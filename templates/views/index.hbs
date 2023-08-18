@@ -7,20 +7,27 @@
 </head>
 
 <body>
-    {{>header}}
-    <form>
-        <input type="text" placeholder="city" id="input">
-        <button id="search">search</button>
 
-    </form>
-    <br>
-    <span id="first">
-    </span><br>
-    <span id="seconed">
-    </span><br>
-    <span id="theered">
-    </span>
+
+    {{>header}}
+
+    <div id="main-page">
+        <img id="weather-icon">
+
+        <input type="text" id="weather-search" placeholder="City">
+        <button type="submit" id="search-button">Search</button>
+        <ul id="weather-specifications">
+            <li id="temperature"></li>
+            <li id="feelslike"></li>
+            <li id="humidity"></li>
+            <li id="weather_descriptions"></li>
+            <li id="country"></li>
+            <li id="localtime"></li>
+            <li id="timezone_id"></li>
+        </ul>
+    </div>
     {{>footer}}
+
 </body>
 
 
