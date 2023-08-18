@@ -27,7 +27,7 @@
     top: 10%;
     width: 200px;
     height: 150px;
-    border:none;
+    border: none;
     border-radius: 10px;
 }
 
@@ -38,4 +38,52 @@
     list-style: none;
     font-size: larger;
     font-weight: bolder;
+}
+
+@media only screen and (max-width: 600px) {
+    #weather-search {
+        position: absolute;
+        left: 10%;
+        top: 20%;
+        width: 150px;
+        height: 75px;
+        border-style: none;
+        outline: none;
+        font-size: large;
+        font-style: italic;
+        font-weight: lighter;
+    }
+
+    #search-button {
+        position: absolute;
+        left: 55%;
+        top: 23%;
+        width: 100px;
+        height: 35px;
+        border-style: none;
+        outline: none;
+    }
+
+    #weather-icon {
+        visibility: hidden;
+        position: absolute;
+        left: 40%;
+        top: 10%;
+        width: 200px;
+        height: 150px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    #weather-specifications {
+        position: absolute;
+        left: 0%;
+        top: 30%;
+        list-style: none;
+        font-size: larger;
+        font-weight: bolder;
+    }
+    #footer{
+        height: 300px;
+    }
 }

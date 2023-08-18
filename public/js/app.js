@@ -23,16 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     localtime = ''
                     timezone_id = ''
                 } else {
-                    weather_icon.style.visibility = "visible"
-                    weather_icon.src = data.current.weather_icons[0];
-                    temperature.textContent = 'The temperature is: ' + data.current.temperature+'°'
-                    feelslike.textContent = 'But it feels like : ' + data.current.feelslike+'°'
-                    humidity.textContent = 'The humidity is : ' + data.current.humidity+'%'
-                    weather_descriptions.textContent = 'The weather descriptions  : ' + data.current.weather_descriptions[0]
-                    country.textContent = 'Your location is: ' + data.location.country + ',' + data.location.name
-                    localtime.textContent = 'The time in these city : ' + data.location.localtime
-                    timezone_id.textContent = 'The timezone is : ' + data.location.timezone_id
-                    console.log(data)
+                    if (!window.matchMedia("(max-width: 600px)")) {
+                        weather_icon.style.visibility = "visible"
+                        weather_icon.src = data.current.weather_icons[0];
+                        temperature.textContent = 'The temperature is: ' + data.current.temperature + '°'
+                        feelslike.textContent = 'But it feels like : ' + data.current.feelslike + '°'
+                        humidity.textContent = 'The humidity is : ' + data.current.humidity + '%'
+                        weather_descriptions.textContent = 'The weather descriptions  : ' + data.current.weather_descriptions[0]
+                        country.textContent = 'Your location is: ' + data.location.country + ',' + data.location.name
+                        localtime.textContent = 'The time in these city : ' + data.location.localtime
+                        timezone_id.textContent = 'The timezone is : ' + data.location.timezone_id
+                        console.log(data)
+                    } else {
+                        weather_icon.src = data.current.weather_icons[0];
+                        temperature.textContent = 'The temperature is: ' + data.current.temperature + '°'
+                        feelslike.textContent = 'But it feels like : ' + data.current.feelslike + '°'
+                        humidity.textContent = 'The humidity is : ' + data.current.humidity + '%'
+                        weather_descriptions.textContent = 'The weather descriptions  : ' + data.current.weather_descriptions[0]
+                        country.textContent = 'Your location is: ' + data.location.country + ',' + data.location.name
+                        localtime.textContent = 'The time in these city : ' + data.location.localtime
+                        timezone_id.textContent = 'The timezone is : ' + data.location.timezone_id
+                        console.log(data)
+                    }
                 }
 
             })
